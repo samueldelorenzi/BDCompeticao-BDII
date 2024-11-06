@@ -35,7 +35,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW_7S1tTbik8e9it64VbcIApAwno9hZeJmSg&s" width="100px;" /><br>
+      <img src="https://avatars.githubusercontent.com/u/143565209?v=4" width="100px;" /><br>
       <sub>
         <b>Leonardo Zonta</b>
       </sub>
