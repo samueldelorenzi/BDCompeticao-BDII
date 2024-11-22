@@ -25,7 +25,9 @@ create table atleta (
     genero char(1),
     pais_origem varchar(255),
     id_modalidade int,
-    foreign key (id_modalidade) references modalidade(id_modalidade)
+    id_equipe int, 
+	foreign key (id_modalidade) references modalidade(id_modalidade),
+    foreign key (id_equipe) references equipe(id_equipe)
 );
 
 create table torneio (
@@ -81,17 +83,20 @@ create table partida (
     data_partida datetime,
     id_grupo int null,
     id_fase int,
-    id_torneio int,
+    id_equipe1 int,
+    id_equipe2 int,
+    id_atleta1 int,
+    id_atleta2 int,
+    pontos_oponente1 int,
+    pontos_oponente2 int,
+    id_equipe_vencedora int,
+    id_atleta_vencedor int,
     foreign key (id_grupo) references grupo(id_grupo),
     foreign key (id_fase) references fase_torneio(id_fase),
-    foreign key (id_torneio) references torneio(id_torneio)
-);
-
-create table resultado_partida (
-    id_resultado int primary key,
-    id_partida int,
-    pontos_equipe1 int,
-    pontos_equipe2 int,
-    vencedor int null,
-    foreign key (id_partida) references partida(id_partida)
+    foreign key (id_equipe1) references equipe(id_equipe),
+    foreign key (id_equipe2) references equipe(id_equipe),
+    foreign key (id_atleta1) references atleta(id_atleta),
+    foreign key (id_atleta2) references atleta(id_atleta),
+    foreign key (id_atleta_vencedor) references atleta(id_atleta),
+    foreign key (id_equipe_vencedora) references equipe(id_equipe)
 );
